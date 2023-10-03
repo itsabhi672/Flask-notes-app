@@ -1,0 +1,8 @@
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% extends "base.html" %}
+{% block title %}  LogIn Page {% endblock %}
+{% block content %}
+<h1>This is a Log In Page.</h1>
+{{render_form(form)}}
+{% endblock %}

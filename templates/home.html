@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}  Home Page {% endblock %}
+{% block style %}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #BCA37F;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p {
+            font-size: 22px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .features {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .feature {
+            display: inline-block;
+            margin: 0 20px;
+            max-width: 300px;
+            padding: 20px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+        .feature h2 {
+            font-size: 24px;
+        }
+        .feature p {
+            font-size: 16px;
+        }
+{% endblock %}
+{% block content %}
+    <header>
+        <h1>Welcome to NOTESLY</h1>
+        <p>Your Personal Note-Taking App</p>
+    </header>
+    <div class="container">
+        <h2>About MyNotes</h2>
+        <p>MyNotes is a simple and powerful note-taking application that helps you organize your thoughts, ideas, and tasks efficiently. With MyNotes, you can:</p>
+        <div class="features">
+            <div class="feature">
+                <h2>Easy to Use</h2>
+                <p>Intuitive interface for hassle-free note-taking.</p>
+            </div>
+            <div class="feature">
+                <h2>Sync Across Devices</h2>
+                <p>Access your notes from anywhere on any device.</p>
+            </div>
+            <div class="feature">
+                <h2>Organize Your Notes</h2>
+                <p>Create categories and tags to keep your notes organized.</p>
+            </div>
+            <div class="feature">
+                <h2>Privacy First</h2>
+                <p>Your data is secure and private with us.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}  LogIn Page {% endblock %}
+{% block style %}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .note-form {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 20px;
+        }
+        .note-form h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .note-form label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .note-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .note-form textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            resize: vertical; /* Allow vertical resizing of the textarea */
+        }
+        .note-form button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .note-form button:hover {
+            background-color: #2980b9;
+        }
+{% endblock %}
+{% block content %}
+    <div class="container note-form mt-4">
+        <h1>Add a Note</h1>
+        <form method="POST">
+            <label for="note"><strong>Note:</strong></label>
+             <textarea id="note" name="note" rows="4" required></textarea>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <hr>
+    <div class="container notes-display mt-8" id="notes-display">
+        <h3>Your Notes:</h3>
+        <ul class="list-group list-group-flush">
+        {% for note in user.note %}
+            <li class="list-group-item">{{ note.data }}
+            <a  class="float-right" href="{{ url_for('delete_note', note_id=note.id) }}"><strong>✘</strong></a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}
