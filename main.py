@@ -7,14 +7,15 @@ from wtforms.validators import DataRequired, Email, EqualTo, Length
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.sql import func
+import os
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'loveunidhi'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 #Database configuration
 db = SQLAlchemy()
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///notesly.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('URI_STRING')
 db.init_app(app)
 
 #Loading Bootstrap
