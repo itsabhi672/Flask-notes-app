@@ -1,0 +1,17 @@
+email-validator==2.0.0.post2
+flask_sqlalchemy
+Flask-WTF==1.1.1
+GitPython==3.1.35
+greenlet==2.0.2
+gunicorn==21.2.0
+Jinja2==3.1.2
+SQLAlchemy==2.0.20
+uri-template==1.2.0
+virtualenv==20.17.1
+WTForms==3.0.1
+flask_bootstrap
+werkzeug
+flask_login
+sqlalchemy
+flask
+pymysql
