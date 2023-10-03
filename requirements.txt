@@ -9,7 +9,6 @@ SQLAlchemy==2.0.20
 uri-template==1.2.0
 virtualenv==20.17.1
 WTForms==3.0.1
-flask_bootstrap
 werkzeug
 flask_login
 flask
