@@ -12,6 +12,5 @@ WTForms==3.0.1
 flask_bootstrap
 werkzeug
 flask_login
-bootstrap5/form.html
 flask
 pymysql
