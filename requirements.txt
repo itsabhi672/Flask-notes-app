@@ -10,6 +10,7 @@ uri-template==1.2.0
 virtualenv==20.17.1
 WTForms==3.0.1
 werkzeug
+bootstrap5/form
 flask_login
 flask
 pymysql
