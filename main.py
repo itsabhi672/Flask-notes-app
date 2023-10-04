@@ -95,7 +95,7 @@ def sign_up():
             user = User.query.filter_by(email=email).first()
             hashed_password = generate_password_hash(
                 form.password.data,
-                method="pbkdf2",
+                method="SHA-2",
                 salt_length=8
             )
             new_user = User(
